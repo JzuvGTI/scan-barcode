@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Kasir</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/YOUR_FA_KIT.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Sidebar -->
+    <div class="flex">
+        <aside class="w-64 bg-gray-900 text-white min-h-screen p-5">
+            <h2 class="text-2xl font-bold mb-5">KasirApp</h2>
+            <ul>
+                <li class="mb-3"><a href="#" class="flex items-center space-x-3 p-2 hover:bg-gray-700 rounded-lg">
+                    <i class="fas fa-home"></i> <span>Dashboard</span></a>
+                </li>
+                <li class="mb-3"><a href="#" class="flex items-center space-x-3 p-2 hover:bg-gray-700 rounded-lg">
+                    <i class="fas fa-barcode"></i> <span>Kasir</span></a>
+                </li>
+                <li class="mb-3"><a href="#" class="flex items-center space-x-3 p-2 hover:bg-gray-700 rounded-lg">
+                    <i class="fas fa-box"></i> <span>Stok Gudang</span></a>
+                </li>
+                <li class="mb-3"><a href="#" class="flex items-center space-x-3 p-2 hover:bg-gray-700 rounded-lg">
+                    <i class="fas fa-chart-line"></i> <span>Laporan</span></a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Konten Dashboard -->
+        <main class="flex-1 p-8">
+            <h1 class="text-3xl font-bold mb-5">Dashboard</h1>
+
+            <!-- Statistik -->
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-white p-5 rounded-lg shadow-md">
+                    <h2 class="text-xl font-semibold">Total Penjualan</h2>
+                    <p class="text-2xl font-bold text-green-500">Rp 12.500.000</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-md">
+                    <h2 class="text-xl font-semibold">Transaksi Hari Ini</h2>
+                    <p class="text-2xl font-bold text-blue-500">32</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-md">
+                    <h2 class="text-xl font-semibold">Stok Barang</h2>
+                    <p class="text-2xl font-bold text-red-500">120 item</p>
+                </div>
+            </div>
+
+            <!-- Riwayat Transaksi -->
+            <div class="mt-8">
+                <h2 class="text-2xl font-semibold mb-3">Riwayat Transaksi</h2>
+                <table class="w-full bg-white rounded-lg shadow-md">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="p-3">Tanggal</th>
+                            <th class="p-3">Nama Pelanggan</th>
+                            <th class="p-3">Total</th>
+                            <th class="p-3">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="p-3">16 Feb 2025</td>
+                            <td class="p-3">Budi Santoso</td>
+                            <td class="p-3">Rp 150.000</td>
+                            <td class="p-3"><span class="text-green-500">Selesai</span></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-3">16 Feb 2025</td>
+                            <td class="p-3">Siti Aminah</td>
+                            <td class="p-3">Rp 230.000</td>
+                            <td class="p-3"><span class="text-blue-500">Menunggu</span></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-3">16 Feb 2025</td>
+                            <td class="p-3">Andi Pratama</td>
+                            <td class="p-3">Rp 75.000</td>
+                            <td class="p-3"><span class="text-red-500">Dibatalkan</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -58,16 +58,26 @@
             inputStream: {
                 name: "Live",
                 type: "LiveStream",
-                target: document.querySelector("#scanner")
+                target: document.querySelector("#scanner"),
+                constraints: {
+                    width: 640,
+                    height: 480,
+                    facingMode: "environment" // Kamera belakang di HP
+                }
             },
             decoder: {
                 readers: ["ean_reader", "code_128_reader"]
-            }
+            },
+            locate: true
         }, function(err) {
-            if (!err) {
-                Quagga.start();
+            if (err) {
+                console.error("Quagga Init Error:", err);
+                alert("Error: Kamera tidak bisa diakses! Cek izin kamera.");
+                return;
             }
+            Quagga.start();
         });
+
 
         // Event Ketika Barcode Terdeteksi
         Quagga.onDetected(function(data) {
